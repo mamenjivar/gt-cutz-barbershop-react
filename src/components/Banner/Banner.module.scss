@@ -1,0 +1,34 @@
+.backgroundImage {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../img/221463.jpg") center center no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: calc(100vh - 55px);
+}
+
+.backgroundText {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backgroundText hr {
+    opacity: 1;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 30%;
+    margin: auto;
+}
+
+.backgroundColumns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.backgroundColumns img {
+    width: 650px;
+    // height: 400px;
+    object-fit: contain;
+}
