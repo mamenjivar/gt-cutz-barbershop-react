@@ -1,0 +1,12 @@
+.hoursSection {
+ .hoursTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+ }
+ .hours {
+  text-align: center;
+ }
+}

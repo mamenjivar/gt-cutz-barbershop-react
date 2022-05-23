@@ -1,6 +1,10 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import navigationNavItems from '../../constants/navbarData.js';
 
+/**
+ * The navigation bar for the barbershop
+ * @returns 
+ */
 const NavigationBar = () => {
  return (
   <Navbar bg="dark" variant="dark">
