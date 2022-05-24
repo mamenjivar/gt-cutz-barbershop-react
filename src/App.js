@@ -1,5 +1,6 @@
 import NavigationBar from './components/NavigationBar/NavigationBar.tsx';
-import SidebySide from './components/SidebySideContent/SideBySide';
+import SidebySideLR from './components/SidebySideContent/SidebySideContentLR/SideBySideLR';
+import SideBySideRL from './components/SidebySideContent/SidebySideContentRL/SideBySideRL';
 import Home from './pages/Home/Home.jsx';
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div>
       <NavigationBar />
       <Home />
-      <SidebySide />
+      <SidebySideLR />
+      <SideBySideRL />
     </div>
   );
 }

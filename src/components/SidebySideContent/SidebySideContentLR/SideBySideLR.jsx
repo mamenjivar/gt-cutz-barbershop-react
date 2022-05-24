@@ -1,13 +1,13 @@
 import { Col, Container, Row } from "react-bootstrap";
 
 // styling
-import classes from "./SideBySide.module.scss";
+import classes from "./SideBySideLR.module.scss";
 
 /**
  * Hours section for barber shop
  * @returns
  */
-const SidebySide = () => {
+const SidebySideLR = () => {
  return (
   <section className={classes.hoursSection}>
    <Container>
@@ -34,4 +34,4 @@ const SidebySide = () => {
  );
 };
 
-export default SidebySide;
+export default SidebySideLR;
