@@ -1,7 +1,8 @@
 .hoursSection {
-    background-color: #212529;
-    color: #fff100;
-    
+ background-color: #212529;
+ color: #fff100;
+ // margin-left: 10px;
+
  .hoursTitle {
   display: flex;
   flex-direction: row;
@@ -11,10 +12,12 @@
   text-shadow: 4px 4px #000000;
 
   h1 {
-      font-size: 100px;
+   font-size: 100px;
   }
  }
  .hours {
-  text-align: center;
+  //   text-align: center;
+  margin-right: 25%;
+  margin-left: 25%;
  }
 }

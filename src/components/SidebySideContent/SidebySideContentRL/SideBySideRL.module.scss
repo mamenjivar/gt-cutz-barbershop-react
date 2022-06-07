@@ -13,18 +13,19 @@
   justify-content: center;
   align-items: center;
   height: 30vh;
+  text-shadow: 4px 4px #000000;
 
   h1 {
-    font-size: 100px;
+   font-size: 100px;
   }
  }
 
  .location {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
-   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
  }
 }
