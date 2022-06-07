@@ -1,3 +1,4 @@
+import Footer from './components/Footer/Footer';
 import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
 import NavigationBar from './components/NavigationBar/NavigationBar.tsx';
 import SidebySideLR from './components/SidebySideContent/SidebySideContentLR/SideBySideLR';
@@ -12,6 +13,7 @@ function App() {
       <SidebySideLR />
       <SideBySideRL />
       <MeetTheTeam />
+      <Footer />
     </div>
   );
 }

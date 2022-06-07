@@ -1,10 +1,18 @@
 .hoursSection {
+    background-color: #212529;
+    color: #fff100;
+    
  .hoursTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100%;
+  text-shadow: 4px 4px #000000;
+
+  h1 {
+      font-size: 100px;
+  }
  }
  .hours {
   text-align: center;
