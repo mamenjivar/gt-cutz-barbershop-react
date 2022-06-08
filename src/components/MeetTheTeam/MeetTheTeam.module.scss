@@ -18,5 +18,11 @@
   .centerTitle {
       text-align: center;
   }
+
+  .centerButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
  }
 }
