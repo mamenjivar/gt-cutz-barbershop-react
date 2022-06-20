@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Footer from './components/Footer/Footer';
 import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
 import NavigationBar from './components/NavigationBar/NavigationBar.tsx';
@@ -7,14 +8,14 @@ import Home from './pages/Home/Home.jsx';
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <NavigationBar />
       <Home />
       <SidebySideLR />
       <SideBySideRL />
       <MeetTheTeam />
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

@@ -12,14 +12,14 @@ const SideBySideRL = () => {
   <section className={`${classes.backgroundImage} ${classes.locationSection}`}>
    <Container>
     <Row>
-     <Col md={6}>
+     <Col md={{span: 6}} xs={{span: 12, order: 2}}>
       <div className={classes.location}>
        <h2>3978 S Figueroa St, <br />Los Angeles, CA 90037</h2>
       </div>
      </Col>
-     <Col md={6}>
+     <Col md={{span: 6, order: 2}} xs={{span: 12, order: 1}}>
       <div className={classes.locationTitle}>
-       <h1>Location</h1>
+       <h1 className={classes.locationSize}>Location</h1>
       </div>
      </Col>
     </Row>

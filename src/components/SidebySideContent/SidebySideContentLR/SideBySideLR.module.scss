@@ -1,23 +1,28 @@
 .hoursSection {
- background-color: #212529;
- color: #fff100;
- // margin-left: 10px;
+  background-color: #212529;
+  color: #fff100;
 
- .hoursTitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-shadow: 4px 4px #000000;
+  .hoursTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-shadow: 4px 4px #000000;
 
-  h1 {
-   font-size: 100px;
+    .hoursSize {
+      font-size: 100px;
+    }
   }
- }
- .hours {
-  //   text-align: center;
-  margin-right: 25%;
-  margin-left: 25%;
- }
+  .hours {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .hoursSize {
+    font-size: 50px !important;
+    text-decoration: underline;
+  }
 }
