@@ -1,28 +1,35 @@
 .meetTheTeam {
- background-color: #212529;
- // color: #fff100;
+  background-color: #212529;
 
- h1 {
-  text-align: center;
-  color: #fff100;
-  font-size: 40px;
- }
+  h1 {
+    text-align: center;
+    color: #fff100;
+    font-size: 40px;
+  }
 
- .instaSize {
-  font-size: 30px;
- }
+  .instaSize {
+    font-size: 30px;
+  }
 
- .teamCard {
-  padding-bottom: 20px;
+  .teamCard {
+    padding-bottom: 20px;
 
-  .centerTitle {
+    .centerTitle {
       text-align: center;
-  }
+    }
 
-  .centerButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    .centerButton {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
- }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .meetTheTeam {
+    .teamTitleSize {
+      text-decoration: underline;
+    }
+  }
 }

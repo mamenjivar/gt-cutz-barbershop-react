@@ -1,10 +1,5 @@
 const navigationNavItems = [
     {
-        name: 'Home',
-        link: '#home',
-        id: 0
-    },
-    {
         name: 'Location',
         link: '#location',
         id: 1
