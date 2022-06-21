@@ -31,8 +31,23 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .locationSection {
     .locationSize {
-        font-size: 50px !important;
-        text-decoration: underline;
-      }
+      font-size: 50px !important;
+      text-decoration: underline;
+    }
+
+    .locationTitle {
+      display: block;
+      flex-direction: column;
+      text-align: center;
+      height: 100%;
+    }
+
+    .location {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
+}
