@@ -5,6 +5,15 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 // styles
 import classes from './MeetTheTeam.module.scss';
 
+// images
+import gtcutz from '../../img/team-img/Gtctuz-Gt_the_barber.jpeg';
+import dannyhbarber from '../../img/team-img/DannyHBarber-Danny-the-barber.jpeg';
+import lavishcutz from '../../img/team-img/LavishhJr_Cutzz-Jr_the_barber.jpeg';
+import miguelblends from '../../img/team-img/_miguelblends-Miguel_the_barber.jpeg';
+import ciskoeCutz from '../../img/team-img/Ciskoe_Cutz-Ciskoe_the_barber.jpeg';
+import jumpyCutz from '../../img/team-img/jumpy_cutz-Hector_the_barber.jpeg';
+import chuckiscutz from '../../img/team-img/chuckiscuts1-vanessa-Garza.jpeg';
+
 /**
  * Meet the team section where one can see
  * all the barbers that are available.
@@ -21,16 +30,22 @@ const MeetTheTeam = () => {
         <Row>
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={gtcutz} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   GT the Barber
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
+                  <a
+                    href="https://www.instagram.com/gtcutz/?hl=en"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
                   @GTcutz
                 </Card.Text>
                 <div className={classes.centerButton}>
@@ -46,18 +61,25 @@ const MeetTheTeam = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={dannyhbarber} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   Danny the Barber
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
+                  <a
+                    href="https://www.instagram.com/DannyHBarber/?hl=en"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
                   @DannyHBarber
                 </Card.Text>
                 <div className={classes.centerButton}>
@@ -73,19 +95,26 @@ const MeetTheTeam = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={lavishcutz} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   Jr the Barber
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
-                  @LavishhJr_Cutzzz
+                  <a
+                    href="https://www.instagram.com/lavishhjr_cutzz/?hl=en"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
+                  @LavishhJr_Cutzz
                 </Card.Text>
                 <div className={classes.centerButton}>
                   <Button
@@ -105,17 +134,23 @@ const MeetTheTeam = () => {
         <Row>
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={miguelblends} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   Miguel the Barber
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
-                  @Ciskoe_Cutz
+                  <a
+                    href="https://www.instagram.com/_Miguelblends/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
+                  @_Miguelblends
                 </Card.Text>
                 <div className={classes.centerButton}>
                   <Button
@@ -130,18 +165,25 @@ const MeetTheTeam = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={ciskoeCutz} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   Ciskoe the Barber
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
+                  <a
+                    href="https://www.instagram.com/Ciskoe_Cutz/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
                   @Ciskoe_Cutz
                 </Card.Text>
                 <div className={classes.centerButton}>
@@ -157,18 +199,25 @@ const MeetTheTeam = () => {
               </Card.Body>
             </Card>
           </Col>
+
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={jumpyCutz} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   Hector the Barber
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
+                  <a
+                    href="https://www.instagram.com/Jumpy_Cutz/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
                   @Jumpy_Cutz
                 </Card.Text>
                 <div className={classes.centerButton}>
@@ -185,19 +234,26 @@ const MeetTheTeam = () => {
             </Card>
           </Col>
         </Row>
+        
         <Row>
           <Col md={4} sm={12} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
-              <Card.Img />
+              <Card.Img src={chuckiscutz} />
               <Card.Body>
                 <Card.Title className={classes.centerTitle}>
                   Vanessa <br /> Barber / Cosmetologist
                 </Card.Title>
                 <Card.Text>
-                  <FontAwesomeIcon
-                    className={classes.instaSize}
-                    icon={faInstagram}
-                  />{' '}
+                  <a
+                    href="https://www.instagram.com/ChuckisCuts1/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className={classes.instaSize}
+                      icon={faInstagram}
+                    />
+                  </a>{' '}
                   @ChuckisCuts1
                 </Card.Text>
                 <div className={classes.centerButton}>
