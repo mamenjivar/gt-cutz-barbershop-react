@@ -1,7 +1,7 @@
 .locationSection,
 .backgroundImage {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('./221463.jpg') center center no-repeat;
+    url('../../../img/221463.jpg') center center no-repeat;
   background-attachment: fixed;
   width: 100%;
   height: 30vh;
@@ -36,7 +36,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .locationSection {
+  .locationSection, .backgroundImage {
+    background-attachment: scroll;
+
     .locationSize {
       font-size: 50px !important;
       text-decoration: underline;

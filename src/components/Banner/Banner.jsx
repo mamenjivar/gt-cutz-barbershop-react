@@ -1,4 +1,4 @@
-import logo from '../../img/IMG-8890.PNG';
+import logo from '../../img/gt-cutz-cutout.PNG'
 
 // styling
 import styles from './Banner.module.scss';
