@@ -25,7 +25,7 @@ const MeetTheTeam = () => {
   return (
     <section className={classes.meetTheTeam}>
       <Container>
-        <h1 className={classes.teamTitleSize}>Meet the Team</h1>
+        <h1 className={classes.teamTitleSize}>Book Us Here</h1>
 
         <Row>
           <Col md={4} sm={12} className={classes.teamCard}>
