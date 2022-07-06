@@ -28,7 +28,7 @@ const MeetTheTeam = () => {
         <h1 className={classes.teamTitleSize}>Book Us Here</h1>
 
         <Row>
-          <Col md={4} sm={12} className={classes.teamCard}>
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={gtcutz} />
               <Card.Body>
@@ -62,7 +62,7 @@ const MeetTheTeam = () => {
             </Card>
           </Col>
 
-          <Col md={4} sm={12} className={classes.teamCard}>
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={dannyhbarber} />
               <Card.Body>
@@ -96,7 +96,7 @@ const MeetTheTeam = () => {
             </Card>
           </Col>
 
-          <Col md={4} sm={12} className={classes.teamCard}>
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={lavishcutz} />
               <Card.Body>
@@ -129,10 +129,8 @@ const MeetTheTeam = () => {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
 
-        <Row>
-          <Col md={4} sm={12} className={classes.teamCard}>
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={miguelblends} />
               <Card.Body>
@@ -166,7 +164,7 @@ const MeetTheTeam = () => {
             </Card>
           </Col>
 
-          <Col md={4} sm={12} className={classes.teamCard}>
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={ciskoeCutz} />
               <Card.Body>
@@ -200,7 +198,7 @@ const MeetTheTeam = () => {
             </Card>
           </Col>
 
-          <Col md={4} sm={12} className={classes.teamCard}>
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={jumpyCutz} />
               <Card.Body>
@@ -233,10 +231,8 @@ const MeetTheTeam = () => {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
-        
-        <Row>
-          <Col md={4} sm={12} className={classes.teamCard}>
+
+          <Col md={6} sm={12} lg={4} className={classes.teamCard}>
             <Card style={{ width: '18rem' }} className="mx-auto">
               <Card.Img src={chuckiscutz} />
               <Card.Body>
