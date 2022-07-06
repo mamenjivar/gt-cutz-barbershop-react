@@ -1,5 +1,4 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import navigationNavItems from '../../constants/navbarData.js';
 import { Link as ScrollLink } from 'react-scroll';
 
 // styles
@@ -9,13 +8,11 @@ import classes from './NavigationBar.module.scss';
  * @returns
  */
 const NavigationBar = () => {
-  const handleSetActive = () => {};
-
   return (
     <nav className={classes.navColor}>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">GT Cutz</Navbar.Brand>
+          <Navbar.Brand href="#home">GT CUTZ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
