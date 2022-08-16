@@ -10,7 +10,7 @@ import classes from './NavigationBar.module.scss';
 const NavigationBar = () => {
   return (
     <nav className={classes.navColor}>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className={classes.colorNav} variant="dark">
         <Container>
           <Navbar.Brand href="#home">GT CUTZ</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
