@@ -1,6 +1,9 @@
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faInstagram,
+  faInstagramSquare,
+} from '@fortawesome/free-brands-svg-icons';
 
 // styles
 import classes from './MeetTheTeam.module.scss';
@@ -13,6 +16,7 @@ import miguelblends from '../../img/team-img/_miguelblends-Miguel_the_barber.jpe
 import ciskoeCutz from '../../img/team-img/Ciskoe_Cutz-Ciskoe_the_barber.jpeg';
 import jumpyCutz from '../../img/team-img/jumpy_cutz-Hector_the_barber.jpeg';
 import chuckiscutz from '../../img/team-img/chuckiscuts1-vanessa-Garza.jpeg';
+import { classicNameResolver } from 'typescript';
 
 /**
  * Meet the team section where one can see
@@ -35,7 +39,8 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   GT the Barber
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>@GTcutz</Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/gtcutz/?hl=en"
                     target="_blank"
@@ -43,12 +48,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @GTcutz
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="Https://getsqr.co/gt-the-barber"
                     variant="primary"
@@ -69,7 +71,10 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   Danny the Barber
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>
+                  @DannyHBarber
+                </Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/DannyHBarber/?hl=en"
                     target="_blank"
@@ -77,12 +82,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @DannyHBarber
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="https://dannybarber.square.site/"
                     variant="primary"
@@ -103,7 +105,10 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   Jr the Barber
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>
+                  @LavishhJr_Cutzz
+                </Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/lavishhjr_cutzz/?hl=en"
                     target="_blank"
@@ -111,12 +116,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @LavishhJr_Cutzz
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="http://book.thecut.co/lavishhjr_cutzz"
                     variant="primary"
@@ -137,7 +139,8 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   Miguel the Barber
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>@_Miguelblends</Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/_Miguelblends/"
                     target="_blank"
@@ -145,12 +148,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @_Miguelblends
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="https://getsqr.co/miguel-silva"
                     variant="primary"
@@ -171,7 +171,8 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   Ciskoe the Barber
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>@Ciskoe_Cutz</Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/Ciskoe_Cutz/"
                     target="_blank"
@@ -179,12 +180,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @Ciskoe_Cutz
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="https://instagram.com/ciskoe_cutz?igshid=YmMyMTA2M2Y="
                     variant="primary"
@@ -205,7 +203,8 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   Hector the Barber
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>@Jumpy_Cutz</Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/Jumpy_Cutz/"
                     target="_blank"
@@ -213,12 +212,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @Jumpy_Cutz
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="https://instagram.com/jumpy_cutz?igshid=YmMyMTA2M2Y="
                     variant="primary"
@@ -239,7 +235,10 @@ const MeetTheTeam = () => {
                 <Card.Title className={classes.centerTitle}>
                   Vanessa <br /> Barber / Cosmetologist
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className={classes.igCenter}>
+                  @ChuckisCuts1
+                </Card.Text>
+                <div className={classes.centerButton}>
                   <a
                     href="https://www.instagram.com/ChuckisCuts1/"
                     target="_blank"
@@ -247,12 +246,9 @@ const MeetTheTeam = () => {
                   >
                     <FontAwesomeIcon
                       className={classes.instaSize}
-                      icon={faInstagram}
+                      icon={faInstagramSquare}
                     />
-                  </a>{' '}
-                  @ChuckisCuts1
-                </Card.Text>
-                <div className={classes.centerButton}>
+                  </a>
                   <Button
                     href="https://instagram.com/chuckiscuts1?igshid=YmMyMTA2M2Y="
                     variant="primary"
