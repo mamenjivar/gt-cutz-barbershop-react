@@ -45,3 +45,10 @@
     display: block;
   }
 }
+
+// ipad pro || tablet devices
+@media (min-width: 481px) and (max-width: 1367px) {
+  .backgroundImage {
+    background-attachment: scroll;
+  }
+}
