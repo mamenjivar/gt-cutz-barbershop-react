@@ -1,6 +1,4 @@
 .backgroundImage {
-  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  //   url('../../img/221463.jpg') center center no-repeat;
   background: url('../../img/honeycomb-background.jpg') center center no-repeat;
   background-attachment: fixed;
   width: 100%;
@@ -33,6 +31,10 @@
   width: 650px;
   object-fit: contain;
 }
+
+/******************************************/
+// MEDIA QUERIES
+/******************************************/
 
 // mobile devices iphone 7 plus
 @media (min-width: 320px) and (max-width: 480px) {

@@ -1,7 +1,5 @@
 .locationSection,
 .backgroundImage {
-  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  //   url('../../../img/221463.jpg') center center no-repeat;
   background: url('../../../img/honeycomb-background.jpg') center center no-repeat;
   background-attachment: fixed;
   width: 100%;
@@ -36,6 +34,11 @@
   }
 }
 
+/******************************************/
+// MEDIA QUERIES
+/******************************************/
+
+// mobile devices iphone 7 plus
 @media (min-width: 320px) and (max-width: 480px) {
   .locationSection, .backgroundImage {
     background-attachment: scroll;
@@ -58,6 +61,7 @@
   }
 }
 
+// ipad pro || tablet device
 @media (min-width: 481px) and (max-width: 1367px) {
   .locationSection, .backgroundImage {
     background-attachment: scroll;
