@@ -1,3 +1,4 @@
+import React from 'react';
 import { Fragment } from 'react';
 import Footer from './components/Footer/Footer';
 import NavigationBar from './components/NavigationBar/NavigationBar.tsx';

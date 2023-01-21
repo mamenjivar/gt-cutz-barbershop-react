@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from '../../img/gt-cutz-cutout.PNG'
 
 // styling
