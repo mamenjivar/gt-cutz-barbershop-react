@@ -7,7 +7,6 @@ import Home from './pages/Home/Home.jsx';
 // Vercel analytics
 import { Analytics } from '@vercel/analytics/react';
 
-
 function App() {
   return (
     <Fragment>
