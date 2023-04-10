@@ -30,8 +30,8 @@ const EventCards = () => {
                     {item.eventDescription}
                   </Card.Text>
                   <div className="mt-auto d-flex justify-content-around">
-                    <Button className="btn-lg">More Info</Button>
-                    <Button className="btn-lg">Sign Up</Button>
+                    <Button size='lg'>More Info</Button>
+                    <Button size='lg'>Sign Up</Button>
                   </div>
                 </Card.Body>
               </Card>

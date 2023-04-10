@@ -1,7 +1,7 @@
 import dannyhbarber from '../img/team-img/dannybarber.jpeg';
 
 /**
- * Data where all team information is located.
+ * Data where all event information is located.
  */
 const eventsData = [
   {
