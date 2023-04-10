@@ -1,0 +1,54 @@
+.backgroundImage {
+    background: url('../../img/honeycomb-background.jpg') center center no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: calc(50vh - 55px);
+  }
+  
+  .backgroundText h1 {
+    color: #fff100;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 100px;
+    text-shadow: 6px 6px black;
+  }
+  
+  .backgroundText hr {
+    opacity: 1;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 30%;
+    margin: auto;
+  }
+  
+  .backgroundColumns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  /******************************************/
+  // MEDIA QUERIES
+  /******************************************/
+  
+  // mobile devices iphone 7 plus
+  @media (min-width: 320px) and (max-width: 480px) {
+    .backgroundImage {
+      background-attachment: scroll;
+    }
+    .backgroundColumns img {
+      width: 350px;
+      object-fit: contain;
+      display: block;
+    }
+  }
+  
+  // ipad pro || tablet devices
+  @media (min-width: 481px) and (max-width: 1367px) {
+    .backgroundImage {
+      background-attachment: scroll;
+    }
+  }
+  
