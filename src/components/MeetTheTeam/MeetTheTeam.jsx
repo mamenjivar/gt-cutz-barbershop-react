@@ -32,7 +32,7 @@ const MeetTheTeam = () => {
                 lg={4}
                 className={classes.teamCard}
               >
-                <Card style={{ width: '18rem' }} className="mx-auto">
+                <Card style={{ width: '18rem' }} className="mx-auto border-0">
                   <Card.Img src={item.image} />
                   <Card.Body>
                     <Card.Title className={classes.centerTitle}>
