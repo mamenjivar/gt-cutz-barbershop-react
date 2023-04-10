@@ -3,11 +3,12 @@ import React from 'react';
 import classes from './Footer.module.scss';
 
 const Footer = () => {
- return (
-  <footer className={classes.footerSection}>
-   <p>&copy; 2022 GT Cutz all rights reserved</p>
-  </footer>
- );
+  const copyRightDate = new Date().getFullYear();
+  return (
+    <footer className={classes.footerSection}>
+      <p>&copy; {copyRightDate} GT Cutz all rights reserved</p>
+    </footer>
+  );
 };
 
 export default Footer;
