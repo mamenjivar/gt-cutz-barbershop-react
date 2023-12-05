@@ -4,8 +4,6 @@ import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 // styles
 import styles from './EventCards.module.scss';
 
-import testImage from '../../img/team-img/dannybarber.jpeg';
-
 import eventsData from '../../constants/eventsData';
 
 const EventCards = () => {
