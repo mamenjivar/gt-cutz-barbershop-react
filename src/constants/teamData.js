@@ -7,7 +7,7 @@ import ciskoeCutz from '../img/team-img/Ciskoe_Cutz-Ciskoe_the_barber.jpeg';
 import jumpyCutz from '../img/team-img/jumpy_cutz-Hector_the_barber.jpeg';
 import chuckiscutz from '../img/team-img/chuckiscuts1-vanessa-Garza.jpeg';
 import diegocutz from '../img/team-img/Diego-cutz-barber.jpeg';
-import pollocutz from '../img/team-img/pollocutz-barber.jpeg';
+// import pollocutz from '../img/team-img/pollocutz-barber.jpeg';
 
 /**
  * Data where all team information is located.
@@ -76,15 +76,15 @@ const teamData = [
     handleName: '@d.tb___',
     handleLink: 'https://www.instagram.com/d.tb___/',
     bookLink: 'http://book.thecut.co/dtb_'
-  },
-  {
-    image: pollocutz,
-    name: 'Pollo the Barber',
-    specialty: '',
-    handleName: '@pollocutz_',
-    handleLink: 'https://www.instagram.com/pollocutz_/',
-    bookLink: 'https://www.instagram.com/pollocutz_/?igshid=YmMyMTA2M2Y%3D'
   }
+  // {
+  //   image: pollocutz,
+  //   name: 'Pollo the Barber',
+  //   specialty: '',
+  //   handleName: '@pollocutz_',
+  //   handleLink: 'https://www.instagram.com/pollocutz_/',
+  //   bookLink: 'https://www.instagram.com/pollocutz_/?igshid=YmMyMTA2M2Y%3D'
+  // }
 ];
 
 export default teamData;

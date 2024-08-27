@@ -20,7 +20,7 @@ const MeetTheTeam = () => {
   return (
     <section className={classes.meetTheTeam}>
       <Container>
-        <h1 className={classes.teamTitleSize}>Book Us Here</h1>
+        <h1 className={classes.teamTitleSize}>Book Us</h1>
 
         <Row>
           {teamData.map((item, index) => {
