@@ -2,10 +2,10 @@ import React from 'react';
 import { Fragment } from 'react';
 
 // components
-import Banner from '../../components/Banner/Banner';
-import MeetTheTeam from '../../components/MeetTheTeam/MeetTheTeam';
-import SidebySideLR from '../../components/SidebySideContent/SidebySideContentLR/SideBySideLR';
-import SideBySideRL from '../../components/SidebySideContent/SidebySideContentRL/SideBySideRL';
+import Banner from '../components/Banner/Banner';
+import MeetTheTeam from '../components/MeetTheTeam/MeetTheTeam';
+import SidebySideLR from '../components/SidebySideContent/SidebySideContentLR/SideBySideLR';
+import SideBySideRL from '../components/SidebySideContent/SidebySideContentRL/SideBySideRL';
 
 import { Element } from 'react-scroll';
 
