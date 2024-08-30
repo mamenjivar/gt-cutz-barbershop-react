@@ -9,7 +9,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar.tsx';
 
 // pages
 import Home from './pages/Home.jsx';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 // Vercel analytics
 //import { Analytics } from '@vercel/analytics/react';
