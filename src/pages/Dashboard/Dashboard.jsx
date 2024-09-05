@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+// import app from "../../firebaseConfig";
+// import { getDatabase, ref, set, push } from "firebase/database";
+// import { useNavigate } from 'react-router-dom';
 
 // styling
 import classes from './Dashboard.module.scss';
@@ -8,8 +11,15 @@ import classes from './Dashboard.module.scss';
  * @returns 
  */
 const Dashboard = () => {
-    // lassName={`${styles.backgroundImage} ${styles.backgroundText} ${styles.backgroundColumns}`}>
-    // import classes from './MeetTheTeam.module.scss';
+    let [name, setName] = useState('');
+    let [barberName, setBarberName] = useState('');
+    let [instagramHandle, setInstagramHandle] = useState('');
+    let [instagramURL, setInstagramURL] = useState('');
+    let [bookingURL, setBookingURL] = useState('');
+    let [isBarberActive, setIsBarberActive] = useState('');
+    useLog('barberName', barberName);
+
+    // https://stackoverflow.com/questions/64724042/how-do-i-console-log-state-with-forms-in-react-hooks
 
     // sends request to create a new barber
     const createBarber = () => {
@@ -21,6 +31,10 @@ const Dashboard = () => {
         console.log('go back clicked');
     }
 
+    function useLog(name, property) {
+        useEffect(() => console.log(name, property), [name, property]);
+      }
+
     return (
         <section >
             <h1 className={classes.header}>Add a new Barber</h1>
@@ -30,39 +44,43 @@ const Dashboard = () => {
                     <fieldset>
                         <div>
                             <label htmlFor='name'>Name</label><br />
-                            <input type='text' id='name' /><br />
-                            <span>The name of the Barber. (This won't get displayed on website)</span>
+                            <input type='text' id='name' value={name} onChange={(e) => setName(e.target.value)}/><br />
+                            <span className={classes.barberFieldDescription}>The name of the Barber. (This won't get displayed on website)</span>
                         </div>
 
                         <div>
                             <label htmlFor='barberName'>Barber Name</label><br />
-                            <input type='text' id='barberName' /><br />
-                            <span>Nickname of barber that will get displayed in the website.</span>
+                            <input type='text' id='barberName' value={barberName} onChange={(e) => setBarberName(e.target.value)}/><br />
+                            <span className={classes.barberFieldDescription}>Nickname of barber that will get displayed in the website.</span>
                         </div>
 
                         <div>
                             <label htmlFor='instagramHandle'>Instagram Handle</label><br />
-                            <input type='text' id='instagramHandle' /><br />
-                            <span>The username for this Barber that appears on Instagram. (optional)</span>
+                            <input type='text' id='instagramHandle' value={instagramHandle} onChange={(e) => setInstagramHandle(e.target.value)}/><br />
+                            <span className={classes.barberFieldDescription}>The username for this Barber that appears on Instagram. (optional)</span>
                         </div>
 
                         {/* This field can be constructed using the Instagram Handle above, may need to test */}
                         <div>
                             <label htmlFor='instagramURL'>Instagram URL</label><br />
-                            <input type='text' id='instagramURL' /><br />
-                            <span>Insert the URL for this Barber's Instagram page. (optional)</span>
+                            <input type='text' id='instagramURL' value={instagramURL} onChange={(e) => setInstagramURL(e.target.value)}/><br />
+                            <span className={classes.barberFieldDescription}>Insert the URL for this Barber's Instagram page. (optional)</span>
                         </div>
 
                         <div>
                             <label htmlFor='bookingURL'>Booking URL</label><br />
-                            <input type='text' id='bookingURL' /><br />
-                            <span>Place the link where customers can schedule appointments with this Barber.</span>
+                            <input type='text' id='bookingURL' value={bookingURL} onChange={(e) => setBookingURL(e.target.value)}/><br />
+                            <span className={classes.barberFieldDescription}>Place the link where customers can schedule appointments with this Barber.</span>
                         </div>
 
                         <div>
-                            <label htmlFor='isActive'>Is Barber Active?</label><br />
-                            <input type='checkbox' id='isActive' checked/><br />
-                            <span>Keep box selected so the barber can show on the website.</span>
+                            <label>Is Barber Active?</label><br />
+                            <input type="radio" id="yes" name="isActive" value="true" checked />
+                            <label htmlFor='yes'>Yes</label><br />
+
+                            <input type="radio" id="no" name="isActive" value="false" />
+                            <label htmlFor='no'>No</label><br />
+                            <span className={classes.barberFieldDescription}>Yes will make the barber show live.</span>
                         </div>
 
                         <button type='button' onClick={createBarber}>Create</button>
