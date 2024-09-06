@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import app from "../../firebaseConfig";
-// import { getDatabase, ref, set, push } from "firebase/database";
+import {app} from "../../firebaseConfig";
+import { getDatabase, ref, set, push } from "firebase/database";
 // import { useNavigate } from 'react-router-dom';
 
 // styling
@@ -16,14 +16,36 @@ const Dashboard = () => {
     let [instagramHandle, setInstagramHandle] = useState('');
     let [instagramURL, setInstagramURL] = useState('');
     let [bookingURL, setBookingURL] = useState('');
-    let [isBarberActive, setIsBarberActive] = useState('');
-    useLog('barberName', barberName);
-
-    // https://stackoverflow.com/questions/64724042/how-do-i-console-log-state-with-forms-in-react-hooks
+    let [isBarberActive, setIsBarberActive] = useState('true');
+    useLog('isBarberActive', isBarberActive); // testing purposes
 
     // sends request to create a new barber
     const createBarber = () => {
-        console.log('clicked!');
+        console.log('created barber!');
+        const db = getDatabase(app);
+        const newDocRef = push(ref(db, "barber"));
+        set(newDocRef, {
+            name: name,
+            barberName: barberName,
+            instagramHandle: instagramHandle,
+            instagramURL: instagramURL,
+            bookingURL: bookingURL,
+            isBarberActive: isBarberActive
+        }).then(() => {
+            alert('new barber has been created! congratulations!');
+
+            // clear the form when new barber is created
+            setName('');
+            setBarberName('');
+            setInstagramHandle('');
+            setInstagramURL('');
+            setBookingURL('');
+            setIsBarberActive('');
+
+            // TODO: make a modal which opens up, or a banner across top part of page to know that it has been successful
+        }).catch((error) => {
+            alert("error", error.message);
+        })
     }
 
     // go back to main dashboard page
@@ -75,10 +97,10 @@ const Dashboard = () => {
 
                         <div>
                             <label>Is Barber Active?</label><br />
-                            <input type="radio" id="yes" name="isActive" value="true" checked />
+                            <input type="radio" id="yes" name="isActive" value="true" checked={isBarberActive === "true"} onChange={(e) => setIsBarberActive(e.target.value)}/>
                             <label htmlFor='yes'>Yes</label><br />
 
-                            <input type="radio" id="no" name="isActive" value="false" />
+                            <input type="radio" id="no" name="isActive" value="false" checked={isBarberActive === "false"} onChange={(e) => setIsBarberActive(e.target.value)}/>
                             <label htmlFor='no'>No</label><br />
                             <span className={classes.barberFieldDescription}>Yes will make the barber show live.</span>
                         </div>
