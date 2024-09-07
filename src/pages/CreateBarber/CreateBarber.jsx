@@ -4,7 +4,7 @@ import { getDatabase, ref, set, push } from "firebase/database";
 // import { useNavigate } from 'react-router-dom';
 
 // styling
-import classes from './Dashboard.module.scss';
+import classes from './CreateBarber.module.scss';
 
 /**
  * Dashboard page to handle the backend

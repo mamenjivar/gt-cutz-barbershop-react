@@ -9,7 +9,8 @@ import NavigationBar from './components/NavigationBar/NavigationBar.tsx';
 
 // pages
 import Home from './pages/Home.jsx';
-import Dashboard from './pages/Dashboard/Dashboard';
+import CreateBarber from './pages/CreateBarber/CreateBarber';
+import ViewBarbers from './pages/ViewBarbers/ViewBarbers';
 
 // Vercel analytics
 //import { Analytics } from '@vercel/analytics/react';
@@ -25,7 +26,8 @@ function App() {
         <Routes>
           <Route index path="/home" element={ <Home />} />
           <Route index path="*" element={ <Navigate to="/home" replace />} />
-          <Route path="/dashboard" element={ <Dashboard />} />
+          <Route path="/createbarber" element={ <CreateBarber />} />
+          <Route path="/viewbarbers" element={ <ViewBarbers />} />
         </Routes>
       </Router>
       {/* <NavigationBar />

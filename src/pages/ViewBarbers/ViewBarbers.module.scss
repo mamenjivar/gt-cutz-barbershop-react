@@ -1,0 +1,14 @@
+section {
+    h1 {
+        text-align: center;
+    }
+    table {
+        width: 100%
+    }
+
+    table, th {
+        border: 1px solid red;
+        border-collapse: collapse;
+        text-align: center;
+    }
+}
