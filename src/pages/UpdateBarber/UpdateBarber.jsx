@@ -7,10 +7,10 @@ import { getDatabase, ref, set, push } from "firebase/database";
 import classes from './CreateBarber.module.scss';
 
 /**
- * CreateBarber page to handle the backend
+ * UpdateBarber page to handle the backend
  * @returns 
  */
-const CreateBarber = () => {
+const UpdateBarber = () => {
     let [name, setName] = useState('');
     let [barberName, setBarberName] = useState('');
     let [instagramHandle, setInstagramHandle] = useState('');
@@ -19,46 +19,17 @@ const CreateBarber = () => {
     let [isBarberActive, setIsBarberActive] = useState('true');
     useLog('isBarberActive', isBarberActive); // testing purposes
 
-    // sends request to create a new barber
-    const createBarber = () => {
-        console.log('created barber!');
-        const db = getDatabase(app);
-        const newDocRef = push(ref(db, "barber"));
-        set(newDocRef, {
-            name: name,
-            barberName: barberName,
-            instagramHandle: instagramHandle,
-            instagramURL: instagramURL,
-            bookingURL: bookingURL,
-            isBarberActive: isBarberActive
-        }).then(() => {
-            alert('new barber has been created! congratulations!');
-
-            // clear the form when new barber is created
-            setName('');
-            setBarberName('');
-            setInstagramHandle('');
-            setInstagramURL('');
-            setBookingURL('');
-            setIsBarberActive('');
-
-            // TODO: make a modal which opens up, or a banner across top part of page to know that it has been successful
-        }).catch((error) => {
-            alert("error", error.message);
-        })
-    }
-
-    // go back to main CreateBarber page
+    // go back to main UpdateBarber page
     const goBack = () => {
         console.log('go back clicked');
     }
 
     function useLog(name, property) {
         useEffect(() => console.log(name, property), [name, property]);
-      }
+    }
 
     return (
-        <section >
+        <section>
             <h1 className={classes.header}>Add a new Barber</h1>
 
             <div className={classes.createForm}>
@@ -105,7 +76,7 @@ const CreateBarber = () => {
                             <span className={classes.barberFieldDescription}>Yes will make the barber show live.</span>
                         </div>
 
-                        <button type='button' onClick={createBarber}>Create</button>
+                        <button type='button'>Update</button>
                         <button type='button' onClick={goBack}>Go Back</button>
                     </fieldset>
                 </form>
@@ -114,4 +85,4 @@ const CreateBarber = () => {
     );
 };
 
-export default CreateBarber;
+export default UpdateBarber;
