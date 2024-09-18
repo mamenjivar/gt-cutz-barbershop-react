@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import {app} from "../../firebaseConfig";
-import { getDatabase, ref, set, push } from "firebase/database";
-// import { useNavigate } from 'react-router-dom';
+import { getDatabase, ref, set, get } from "firebase/database";
+import { useParams, useNavigate } from 'react-router-dom';
 
 // styling
-import classes from './CreateBarber.module.scss';
+import classes from './UpdateBarber.module.scss';
 
 /**
  * UpdateBarber page to handle the backend
  * @returns 
  */
 const UpdateBarber = () => {
+    const { firebaseId } = useParams();
+    const navigate = useNavigate();
+
     let [name, setName] = useState('');
     let [barberName, setBarberName] = useState('');
     let [instagramHandle, setInstagramHandle] = useState('');
@@ -21,16 +24,53 @@ const UpdateBarber = () => {
 
     // go back to main UpdateBarber page
     const goBack = () => {
-        console.log('go back clicked');
+        navigate("/ViewBarbers")
     }
 
     function useLog(name, property) {
         useEffect(() => console.log(name, property), [name, property]);
     }
 
+    useEffect(() => {
+        const fetchData = async () => {
+            const db = getDatabase(app);
+            const dbRef = ref(db, "barber/" + firebaseId);
+            const snapshot = await get(dbRef);
+            if(snapshot.exists()) {
+                const targetObject = snapshot.val();
+                setName(targetObject.name);
+                setBarberName(targetObject.barberName);
+                setInstagramHandle(targetObject.instagramHandle);
+                setInstagramURL(targetObject.instagramURL);
+                setBookingURL(targetObject.bookingURL);
+                setIsBarberActive(targetObject.isBarberActive);
+            } else {
+                alert('error');
+            }
+        }
+        fetchData();
+    }, [firebaseId])
+
+    const overwriteData = async () => {
+        const db = getDatabase(app);
+        const newDocRef = ref(db, "barber/" + firebaseId);
+        set(newDocRef, {
+            name: name,
+            barberName: barberName,
+            instagramHandle: instagramHandle,
+            instagramURL: instagramURL,
+            bookingURL: bookingURL,
+            isBarberActive: isBarberActive
+        }).then(() => {
+            alert("data saved successfully");
+        }).catch((error) => {
+            alert("error: ", error.message);
+        })
+    }
+
     return (
         <section>
-            <h1 className={classes.header}>Add a new Barber</h1>
+            <h1 className={classes.header}>Update Barber</h1>
 
             <div className={classes.createForm}>
                 <form>
@@ -76,7 +116,7 @@ const UpdateBarber = () => {
                             <span className={classes.barberFieldDescription}>Yes will make the barber show live.</span>
                         </div>
 
-                        <button type='button'>Update</button>
+                        <button type='button' onClick={overwriteData}>Update</button>
                         <button type='button' onClick={goBack}>Go Back</button>
                     </fieldset>
                 </form>

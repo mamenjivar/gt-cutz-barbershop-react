@@ -40,7 +40,7 @@ const CreateBarber = () => {
             setInstagramHandle('');
             setInstagramURL('');
             setBookingURL('');
-            setIsBarberActive('');
+            setIsBarberActive('true');
 
             // TODO: make a modal which opens up, or a banner across top part of page to know that it has been successful
         }).catch((error) => {
