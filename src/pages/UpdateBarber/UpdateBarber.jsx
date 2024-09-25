@@ -6,30 +6,34 @@ import { useParams, useNavigate } from 'react-router-dom';
 // styling
 import classes from './UpdateBarber.module.scss';
 
+// component
+import BarberFormFields from '../../components/BarberFormFields/BarberFormFields';
+
 /**
  * UpdateBarber page to handle the backend
  * @returns 
  */
 const UpdateBarber = () => {
+    let [barberData, setBarberData] = useState({})
     const { firebaseId } = useParams();
     const navigate = useNavigate();
 
-    let [name, setName] = useState('');
-    let [barberName, setBarberName] = useState('');
-    let [instagramHandle, setInstagramHandle] = useState('');
-    let [instagramURL, setInstagramURL] = useState('');
-    let [bookingURL, setBookingURL] = useState('');
-    let [isBarberActive, setIsBarberActive] = useState('true');
-    useLog('isBarberActive', isBarberActive); // testing purposes
+    // let [name, setName] = useState('');
+    // let [barberName, setBarberName] = useState('');
+    // let [instagramHandle, setInstagramHandle] = useState('');
+    // let [instagramURL, setInstagramURL] = useState('');
+    // let [bookingURL, setBookingURL] = useState('');
+    // let [isBarberActive, setIsBarberActive] = useState('true');
+    // useLog('isBarberActive', isBarberActive); // testing purposes
 
     // go back to main UpdateBarber page
     const goBack = () => {
         navigate("/ViewBarbers")
     }
 
-    function useLog(name, property) {
-        useEffect(() => console.log(name, property), [name, property]);
-    }
+    // function useLog(name, property) {
+    //     useEffect(() => console.log(name, property), [name, property]);
+    // }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,12 +42,20 @@ const UpdateBarber = () => {
             const snapshot = await get(dbRef);
             if(snapshot.exists()) {
                 const targetObject = snapshot.val();
-                setName(targetObject.name);
-                setBarberName(targetObject.barberName);
-                setInstagramHandle(targetObject.instagramHandle);
-                setInstagramURL(targetObject.instagramURL);
-                setBookingURL(targetObject.bookingURL);
-                setIsBarberActive(targetObject.isBarberActive);
+                setBarberData({
+                    name: targetObject.name,
+                    barberName: targetObject.barberName,
+                    instagramHandle: targetObject.instagramHandle,
+                    instagramURL: targetObject.instagramURL,
+                    bookingURL: targetObject.bookingURL,
+                    isBarberActive: targetObject.isBarberActive
+                });
+                // setName(targetObject.name);
+                // setBarberName(targetObject.barberName);
+                // setInstagramHandle(targetObject.instagramHandle);
+                // setInstagramURL(targetObject.instagramURL);
+                // setBookingURL(targetObject.bookingURL);
+                // setIsBarberActive(targetObject.isBarberActive);
             } else {
                 alert('error');
             }
@@ -51,16 +63,16 @@ const UpdateBarber = () => {
         fetchData();
     }, [firebaseId])
 
-    const overwriteData = async () => {
+    const overwriteData = async (data) => {
         const db = getDatabase(app);
         const newDocRef = ref(db, "barber/" + firebaseId);
         set(newDocRef, {
-            name: name,
-            barberName: barberName,
-            instagramHandle: instagramHandle,
-            instagramURL: instagramURL,
-            bookingURL: bookingURL,
-            isBarberActive: isBarberActive
+            name: data.name,
+            barberName: data.barberName,
+            instagramHandle: data.instagramHandle,
+            instagramURL: data.instagramURL,
+            bookingURL: data.bookingURL,
+            isBarberActive: data.isBarberActive
         }).then(() => {
             alert("data saved successfully");
         }).catch((error) => {
@@ -72,7 +84,7 @@ const UpdateBarber = () => {
         <section>
             <h1 className={classes.header}>Update Barber</h1>
 
-            <div className={classes.createForm}>
+            {/* <div className={classes.createForm}>
                 <form>
                     <fieldset>
                         <div>
@@ -93,7 +105,6 @@ const UpdateBarber = () => {
                             <span className={classes.barberFieldDescription}>The username for this Barber that appears on Instagram. (optional)</span>
                         </div>
 
-                        {/* This field can be constructed using the Instagram Handle above, may need to test */}
                         <div>
                             <label htmlFor='instagramURL'>Instagram URL</label><br />
                             <input type='text' id='instagramURL' value={instagramURL} onChange={(e) => setInstagramURL(e.target.value)}/><br />
@@ -120,7 +131,8 @@ const UpdateBarber = () => {
                         <button type='button' onClick={goBack}>Go Back</button>
                     </fieldset>
                 </form>
-            </div>
+            </div> */}
+            <BarberFormFields onSubmitForm={overwriteData} data={barberData}/>
         </section>
     );
 };

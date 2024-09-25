@@ -6,41 +6,44 @@ import { getDatabase, ref, set, push } from "firebase/database";
 // styling
 import classes from './CreateBarber.module.scss';
 
+// component
+import BarberFormFields from '../../components/BarberFormFields/BarberFormFields';
+
 /**
  * CreateBarber page to handle the backend
  * @returns 
  */
 const CreateBarber = () => {
-    let [name, setName] = useState('');
-    let [barberName, setBarberName] = useState('');
-    let [instagramHandle, setInstagramHandle] = useState('');
-    let [instagramURL, setInstagramURL] = useState('');
-    let [bookingURL, setBookingURL] = useState('');
-    let [isBarberActive, setIsBarberActive] = useState('true');
-    useLog('isBarberActive', isBarberActive); // testing purposes
+    // let [name, setName] = useState('');
+    // let [barberName, setBarberName] = useState('');
+    // let [instagramHandle, setInstagramHandle] = useState('');
+    // let [instagramURL, setInstagramURL] = useState('');
+    // let [bookingURL, setBookingURL] = useState('');
+    // let [isBarberActive, setIsBarberActive] = useState('true');
+    // useLog('isBarberActive', isBarberActive); // testing purposes
 
     // sends request to create a new barber
-    const createBarber = () => {
+    const createBarber = (data) => {
         console.log('created barber!');
         const db = getDatabase(app);
         const newDocRef = push(ref(db, "barber"));
         set(newDocRef, {
-            name: name,
-            barberName: barberName,
-            instagramHandle: instagramHandle,
-            instagramURL: instagramURL,
-            bookingURL: bookingURL,
-            isBarberActive: isBarberActive
+            name: data.name,
+            barberName: data.barberName,
+            instagramHandle: data.instagramHandle,
+            instagramURL: data.instagramURL,
+            bookingURL: data.bookingURL,
+            isBarberActive: data.isBarberActive
         }).then(() => {
             alert('new barber has been created! congratulations!');
 
-            // clear the form when new barber is created
-            setName('');
-            setBarberName('');
-            setInstagramHandle('');
-            setInstagramURL('');
-            setBookingURL('');
-            setIsBarberActive('true');
+            // // clear the form when new barber is created
+            // setName('');
+            // setBarberName('');
+            // setInstagramHandle('');
+            // setInstagramURL('');
+            // setBookingURL('');
+            // setIsBarberActive('true');
 
             // TODO: make a modal which opens up, or a banner across top part of page to know that it has been successful
         }).catch((error) => {
@@ -49,19 +52,20 @@ const CreateBarber = () => {
     }
 
     // go back to main CreateBarber page
+    // TODO: need to get this navigation link created. possibly the dashboard homepage
     const goBack = () => {
         console.log('go back clicked');
     }
 
-    function useLog(name, property) {
-        useEffect(() => console.log(name, property), [name, property]);
-      }
+    // function useLog(name, property) {
+    //     useEffect(() => console.log(name, property), [name, property]);
+    //   }
 
     return (
         <section >
             <h1 className={classes.header}>Add a new Barber</h1>
 
-            <div className={classes.createForm}>
+            {/* <div className={classes.createForm}>
                 <form>
                     <fieldset>
                         <div>
@@ -82,7 +86,6 @@ const CreateBarber = () => {
                             <span className={classes.barberFieldDescription}>The username for this Barber that appears on Instagram. (optional)</span>
                         </div>
 
-                        {/* This field can be constructed using the Instagram Handle above, may need to test */}
                         <div>
                             <label htmlFor='instagramURL'>Instagram URL</label><br />
                             <input type='text' id='instagramURL' value={instagramURL} onChange={(e) => setInstagramURL(e.target.value)}/><br />
@@ -109,7 +112,8 @@ const CreateBarber = () => {
                         <button type='button' onClick={goBack}>Go Back</button>
                     </fieldset>
                 </form>
-            </div>
+            </div> */}
+            <BarberFormFields onSubmitForm={createBarber}/>
         </section>
     );
 };
