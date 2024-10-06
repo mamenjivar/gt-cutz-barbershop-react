@@ -1,8 +1,8 @@
 .footerSection {
     background-color: #000000;
-    height: auto;
+    height: 25px;
     text-align: center;
-
+    flex-shrink: 0;
 
     p {
         margin: 0;

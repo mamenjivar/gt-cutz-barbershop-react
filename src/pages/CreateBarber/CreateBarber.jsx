@@ -42,7 +42,7 @@ const CreateBarber = () => {
     }
 
     return (
-        <section >
+        <section className={classes.createFormContent}>
             <h1 className={classes.header}>Add a new Barber</h1>
 
             <BarberFormFields onSubmitForm={createBarber} buttonSubmitText={'Submit'}/>

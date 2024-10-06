@@ -50,7 +50,7 @@ const ViewBarbers = () => {
     }
 
     return (
-        <section>
+        <section className={classes.viewBarberContainer}>
             <h1>View All Barbers</h1>
             <table>
                 <thead>

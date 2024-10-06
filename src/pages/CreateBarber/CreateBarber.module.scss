@@ -1,24 +1,11 @@
-.header {
-    text-align: center;
-}
+.createFormContent {
+    // flex: 1 0 auto;
+    flex-grow: 1;
+    // flex-shrink: 0;
+    // padding-bottom: 15px;
+    align-content: center;
 
-.createForm {
-    text-align: center;
-    display: block;
-
-    form {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-
-        input[type=text] {
-            width: 100%;
-        }
-
-        .barberFieldDescription {
-            color: gray;
-            font-size: 14px;
-        }
+    .header {
+        text-align: center;
     }
 }

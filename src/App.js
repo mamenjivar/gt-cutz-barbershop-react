@@ -13,6 +13,9 @@ import CreateBarber from './pages/CreateBarber/CreateBarber';
 import ViewBarbers from './pages/ViewBarbers/ViewBarbers';
 import UpdateBarber from './pages/UpdateBarber/UpdateBarber';
 
+// import classes from './Footer.module.scss';
+import classes from './App.module.scss';
+
 // Vercel analytics
 //import { Analytics } from '@vercel/analytics/react';
 function App() {
@@ -23,16 +26,18 @@ function App() {
   return (
     <Fragment>
       <NavigationBar />
-      <Router>
-        <Routes>
-          <Route index path="/home" element={ <Home />} />
-          <Route index path="*" element={ <Navigate to="/home" replace />} />
-          <Route path="/createbarber" element={ <CreateBarber />} />
-          <Route path="/viewbarbers" element={ <ViewBarbers />} />
-          <Route path="/updatebarber/:firebaseId" element={ <UpdateBarber />} />
-        </Routes>
-      </Router>
-      <Footer />
+      <div className={classes.container}>
+        <Router>
+          <Routes>
+            <Route index path="/home" element={ <Home />} />
+            <Route index path="*" element={ <Navigate to="/home" replace />} />
+            <Route path="/createbarber" element={ <CreateBarber />} />
+            <Route path="/viewbarbers" element={ <ViewBarbers />} />
+            <Route path="/updatebarber/:firebaseId" element={ <UpdateBarber />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </div>
     </Fragment>
   );
 }

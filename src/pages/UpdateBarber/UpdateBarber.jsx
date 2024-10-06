@@ -65,7 +65,7 @@ const UpdateBarber = () => {
     }
 
     return (
-        <section>
+        <section className={classes.updateBarberContainer}>
             <h1 className={classes.header}>Update Barber</h1>
             <BarberFormFields onSubmitForm={overwriteData} data={barberData} buttonSubmitText={'Update'}/>
         </section>
