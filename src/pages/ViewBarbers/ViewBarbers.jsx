@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {app} from "../../firebaseConfig";
 import { getDatabase, ref, get, remove } from "firebase/database";
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 // styling
 import classes from './ViewBarbers.module.scss';
@@ -49,6 +51,11 @@ const ViewBarbers = () => {
         // fetchData();
     }
 
+    // navigate to create barber page
+    const createBarberAction = () => {
+        navigate("/createBarber")
+    }
+
     return (
         <section className={classes.viewBarberContainer}>
             <h1>View All Barbers</h1>
@@ -79,6 +86,15 @@ const ViewBarbers = () => {
                             </td>
                         </tr>
                     )) : NO_BARBER_FOUND_MESSAGE }
+
+                    {/* Last row reserved for button to navigate user to create a new barber */}
+                    <tr>
+                        <td colSpan={7}>
+                        <button type='button' title='Navigate to form to create a new barber' onClick={createBarberAction}>
+                            <FontAwesomeIcon icon={faUserPlus}/> Create a new barber
+                        </button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </section>

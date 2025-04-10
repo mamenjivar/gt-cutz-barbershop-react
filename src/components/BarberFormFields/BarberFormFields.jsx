@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 // styles
 import classes from './BarberFormFields.module.scss';
 
-
 /**
  * componenet to render the form fields
  * @returns
@@ -12,6 +11,8 @@ import classes from './BarberFormFields.module.scss';
 const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
     const navigate = useNavigate();
 
+    let [profilePicture, setProfilePicture] = useState(null);
+    let [profilePicturePreview, setProfilePicturePreview] = useState(null);
     let [name, setName] = useState('');
     let [barberName, setBarberName] = useState('');
     let [instagramHandle, setInstagramHandle] = useState('');
@@ -25,6 +26,7 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
     }
 
     useEffect(() => {
+        setProfilePicture(data ? data.profilePicture : '');
         setName(data ? data.name : '');
         setBarberName(data ? data.barberName : '');
         setInstagramHandle(data ? data.instagramHandle : '');
@@ -37,6 +39,7 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
     const onFormSubmit = (e) => {
         e.preventDefault();
         onSubmitForm({
+            profilePicture: profilePicture,
             name: name,
             barberName: barberName,
             instagramHandle: instagramHandle,
@@ -46,12 +49,28 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
         });
 
         // clear the form when barber data is sent to parent
+        setProfilePicture(null);
         setName('');
         setBarberName('');
         setInstagramHandle('');
         setInstagramURL('');
         setBookingURL('');
         setIsBarberActive('true');
+    }
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+
+        if(file) {
+            setProfilePicture(file);
+
+            // create preview URL
+            const reader = new FileReader();
+            reader.onload = () => {
+                setProfilePicturePreview(reader.result); // sets image preview
+            };
+            reader.readAsDataURL(file);
+        }
     }
 
     const goBack = () => {
@@ -62,6 +81,13 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
         <div className={classes.createForm}>
             <form>
                 <fieldset>
+                    <div>
+                        <label htmlFor='profilePicture'>Profile Picture</label><br />
+                        <img src={profilePicturePreview} alt='The barber'/> {/* This has to work both ways; when first uploading picture and then when editing picture too */}
+                        <input type="file" accept='image/*' id="profilePicture" onChange={handleFileChange}  /><br />
+                        <span className={classes.barberFieldDescription}>Upload profile picture that will display on home page.</span>
+                    </div>
+
                     <div>
                         <label htmlFor='name'>Name</label><br />
                         <input type='text' id='name' value={name} onChange={(e) => setName(e.target.value)}/><br />

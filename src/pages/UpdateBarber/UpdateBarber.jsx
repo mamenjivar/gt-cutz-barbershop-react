@@ -15,6 +15,7 @@ import BarberFormFields from '../../components/BarberFormFields/BarberFormFields
  */
 const UpdateBarber = () => {
     let [barberData, setBarberData] = useState({
+        profilePicture: '',
         name: '',
         barberName: '',
         instagramHandle: '',
@@ -32,6 +33,7 @@ const UpdateBarber = () => {
             if(snapshot.exists()) {
                 const targetObject = snapshot.val();
                 setBarberData({
+                    profilePicture: targetObject.profilePicture,
                     name: targetObject.name,
                     barberName: targetObject.barberName,
                     instagramHandle: targetObject.instagramHandle,
@@ -51,6 +53,7 @@ const UpdateBarber = () => {
         const db = getDatabase(app);
         const newDocRef = ref(db, "barber/" + firebaseId);
         set(newDocRef, {
+            profilePicture: data.profilePicture, // needs refactoring?? also needs to send call to storage
             name: data.name,
             barberName: data.barberName,
             instagramHandle: data.instagramHandle,
