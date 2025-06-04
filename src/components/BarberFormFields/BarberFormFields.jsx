@@ -58,6 +58,7 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
         setIsBarberActive('true');
     }
 
+    // When user is uploading a file
     const handleFileChange = (e) => {
         const file = e.target.files[0];
 
@@ -83,7 +84,8 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
                 <fieldset>
                     <div>
                         <label htmlFor='profilePicture'>Profile Picture</label><br />
-                        <img src={profilePicturePreview} alt='The barber'/> {/* This has to work both ways; when first uploading picture and then when editing picture too */}
+                        <img src={profilePicture} alt='The barber'/> {/* This has to work both ways; when first uploading picture and then when editing picture too */}
+                        {console.log('profile picture link: ' + profilePicture)}
                         <input type="file" accept='image/*' id="profilePicture" onChange={handleFileChange}  /><br />
                         <span className={classes.barberFieldDescription}>Upload profile picture that will display on home page.</span>
                     </div>
