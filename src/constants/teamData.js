@@ -1,13 +1,10 @@
 // team images
 import gtcutz from '../img/team-img/Gtctuz-Gt_the_barber.jpeg';
-import dannyhbarber from '../img/team-img/dannybarber.jpeg';
-import lavishcutz from '../img/team-img/LavishhJr_Cutzz-Jr_the_barber.jpeg';
 import miguelblends from '../img/team-img/_miguelblends-Miguel_the_barber.jpeg';
 import ciskoeCutz from '../img/team-img/Ciskoe_Cutz-Ciskoe_the_barber.jpeg';
 import jumpyCutz from '../img/team-img/jumpy_cutz-Hector_the_barber.jpeg';
 import chuckiscutz from '../img/team-img/chuckiscuts1-vanessa-Garza.jpeg';
 import diegocutz from '../img/team-img/Diego-cutz-barber.jpeg';
-import pollocutz from '../img/team-img/pollocutz-barber.jpeg';
 
 /**
  * Data where all team information is located.
@@ -20,22 +17,6 @@ const teamData = [
     handleName: '@GTcutz',
     handleLink: 'https://www.instagram.com/gtcutz/?hl=en',
     bookLink: 'https://getsqr.co/gt-the-barber',
-  },
-  {
-    image: dannyhbarber,
-    specialty: '',
-    name: 'Danny the Barber',
-    handleName: '@DannyHBarber',
-    handleLink: 'https://www.instagram.com/dannybarberla/?hl=en',
-    bookLink: 'https://dannybarber.square.site/',
-  },
-  {
-    image: lavishcutz,
-    name: 'Jr the Barber',
-    specialty: '',
-    handleName: '@LavishhJr_Cutzz',
-    handleLink: 'https://www.instagram.com/lavishhjr_cutzz/?hl=en',
-    bookLink: 'http://book.thecut.co/lavishhjr_cutzz'
   },
   {
     image: miguelblends,
@@ -76,7 +57,15 @@ const teamData = [
     handleName: '@d.tb___',
     handleLink: 'https://www.instagram.com/d.tb___/',
     bookLink: 'http://book.thecut.co/dtb_'
-  },
+  }
+];
+
+export default teamData;
+
+// Inactive Barbers
+// last updated: 11/11/25
+/*
+,
   {
     image: pollocutz,
     name: 'Pollo the Barber',
@@ -84,7 +73,21 @@ const teamData = [
     handleName: '@pollocutz_',
     handleLink: 'https://www.instagram.com/pollocutz_/',
     bookLink: 'https://www.instagram.com/pollocutz_/?igshid=YmMyMTA2M2Y%3D'
+  },
+  {
+    image: lavishcutz,
+    name: 'Jr the Barber',
+    specialty: '',
+    handleName: '@LavishhJr_Cutzz',
+    handleLink: 'https://www.instagram.com/lavishhjr_cutzz/?hl=en',
+    bookLink: 'http://book.thecut.co/lavishhjr_cutzz'
+  },
+ {
+    image: dannyhbarber,
+    specialty: '',
+    name: 'Danny the Barber',
+    handleName: '@DannyHBarber',
+    handleLink: 'https://www.instagram.com/dannybarberla/?hl=en',
+    bookLink: 'https://dannybarber.square.site/',
   }
-];
-
-export default teamData;
+ */
