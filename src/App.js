@@ -11,6 +11,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar.tsx';
 import Home from './pages/Home.jsx';
 import CreateBarber from './pages/CreateBarber/CreateBarber';
 import ViewBarbers from './pages/ViewBarbers/ViewBarbers';
+import ViewBarbersCards from './pages/ViewBarbers/ViewBarbersCards';
 import UpdateBarber from './pages/UpdateBarber/UpdateBarber';
 
 // import classes from './Footer.module.scss';
@@ -32,7 +33,7 @@ function App() {
             <Route index path="/home" element={ <Home />} />
             <Route index path="*" element={ <Navigate to="/home" replace />} />
             <Route path="/createbarber" element={ <CreateBarber />} />
-            <Route path="/viewbarbers" element={ <ViewBarbers />} />
+            <Route path="/viewbarbers" element={ <ViewBarbersCards />} />
             <Route path="/updatebarber/:firebaseId" element={ <UpdateBarber />} />
           </Routes>
         </Router>

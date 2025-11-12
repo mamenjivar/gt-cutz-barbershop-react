@@ -62,11 +62,11 @@ const ViewBarbers = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Name</th> {/* won't need it anymore */}
                         <th>Barber Name</th>
                         <th>Instagram handle</th>
                         <th>Instagram URL</th>
-                        <th>Booking URL</th>
+                        <th>Booking URL</th> {/* need Booking name too (squire, IG, etc) - "Book via "Squire/Instagram" */}
                         <th>Is Barber Active?</th>
                         <th>Action</th>
                     </tr>

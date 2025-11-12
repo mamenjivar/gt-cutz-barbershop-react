@@ -1,0 +1,48 @@
+.meetTheTeam {
+  background-color: #000000;
+
+  h1 {
+    text-align: center;
+    color: #fff100;
+    font-size: 60px;
+  }
+
+  .instaSize {
+    font-size: 50px;
+    color: #833ab4;
+  }
+
+  .teamCard {
+    padding-bottom: 20px;
+
+    .centerTitle {
+      text-align: center;
+    }
+
+    .centerButton {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+
+  .buttonSpacing {
+    margin-right: 10px;
+  }
+
+  .labelName {
+    font-weight: bold;
+  }
+
+  .igCenter {
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .meetTheTeam {
+    .teamTitleSize {
+      text-decoration: underline;
+    }
+  }
+}

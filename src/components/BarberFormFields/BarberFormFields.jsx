@@ -87,7 +87,7 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
                         <img src={profilePicture} alt='The barber'/> {/* This has to work both ways; when first uploading picture and then when editing picture too */}
                         {console.log('profile picture link: ' + profilePicture)}
                         <input type="file" accept='image/*' id="profilePicture" onChange={handleFileChange}  /><br />
-                        <span className={classes.barberFieldDescription}>Upload profile picture that will display on home page.</span>
+                        <span className={classes.barberFieldDescription}>This photo will appear on the public barber profile.</span>
                     </div>
 
                     <div>
@@ -99,13 +99,13 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
                     <div>
                         <label htmlFor='barberName'>Barber Name</label><br />
                         <input type='text' id='barberName' value={barberName} onChange={(e) => setBarberName(e.target.value)}/><br />
-                        <span className={classes.barberFieldDescription}>Nickname of barber that will get displayed in the website.</span>
+                        <span className={classes.barberFieldDescription}>Enter the name that would be displayed in the barber profile.</span>
                     </div>
 
                     <div>
                         <label htmlFor='instagramHandle'>Instagram Handle</label><br />
                         <input type='text' id='instagramHandle' value={instagramHandle} onChange={(e) => setInstagramHandle(e.target.value)}/><br />
-                        <span className={classes.barberFieldDescription}>The username for this Barber that appears on Instagram. (optional)</span>
+                        <span className={classes.barberFieldDescription}>Include the Instagram username to showcase their work.</span>
                     </div>
 
                     {/* This field can be constructed using the Instagram Handle above, may need to test */}
@@ -118,7 +118,7 @@ const BarberFormFields = ({ onSubmitForm, data, buttonSubmitText }) => {
                     <div>
                         <label htmlFor='bookingURL'>Booking URL</label><br />
                         <input type='text' id='bookingURL' value={bookingURL} onChange={(e) => setBookingURL(e.target.value)}/><br />
-                        <span className={classes.barberFieldDescription}>Place the link where customers can schedule appointments with this Barber.</span>
+                        <span className={classes.barberFieldDescription}>Enter the link where customers can schedule appointments with this barber.</span>
                     </div>
 
                     <div>

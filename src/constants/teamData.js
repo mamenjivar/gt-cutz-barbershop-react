@@ -12,6 +12,8 @@ import diegocutz from '../img/team-img/Diego-cutz-barber.jpeg';
 /**
  * Data where all team information is located.
  */
+
+// TODO: specialty needs to be filled out for every user; highlights, baby cuts, etc.
 const teamData = [
   {
     image: gtcutz,
