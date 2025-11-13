@@ -101,6 +101,7 @@ const teamData = [
     specialty: '',
     handleName: '@baloos__kutz',
     handleLink: 'https://www.instagram.com/baloos__kutz/',
+    bookLink: 'https://app.thecut.co/barbers/acrossfromBMOstadium',
     bookLabel: 'Book via theCut'
   }
 ];
