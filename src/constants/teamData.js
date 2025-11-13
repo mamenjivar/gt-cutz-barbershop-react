@@ -74,7 +74,7 @@ const teamData = [
     specialty: '',
     handleName: '@eastside.barberr',
     handleLink: 'https://www.instagram.com/eastside.barberr/',
-    bookLink: 'eastsidebarber.setmore.com',
+    bookLink: 'https://eastsidebarber.setmore.com',
     bookLabel: 'Book via Setmore'
   }, 
   {
@@ -83,7 +83,7 @@ const teamData = [
     specialty: '',
     handleName: '@nayver_cuts',
     handleLink: 'https://www.instagram.com/nayver_cuts/',
-    bookLink: 'nayvercuts.square.site',
+    bookLink: 'https://nayvercuts.square.site',
     bookLabel: 'Book via Square'
   }, 
   {
