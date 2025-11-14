@@ -20,7 +20,7 @@ const MeetTheTeam = () => {
   return (
     <section className={classes.meetTheTeam}>
       <Container>
-        <h1 className={classes.teamTitleSize}>Book Us</h1>
+        <h1 className={classes.teamTitleSize}>Meet the Team</h1>
 
         <Row>
           {teamData.map((item, index) => {
@@ -36,29 +36,31 @@ const MeetTheTeam = () => {
                   <Card.Img src={item.image} />
                   <Card.Body>
                     <Card.Title className={classes.centerTitle}>
-                      {item.name} <br  /> {item.specialty !== '' ? item.specialty : ''}
+                      {item.name} <br />{' '}
+                      {item.specialty !== '' ? item.specialty : ''}
                     </Card.Title>
                     <Card.Text className={classes.igCenter}>
-                      {item.handleName}
+                      <div className={classes.IGcontainer} title='Opens Instagram profile'>
+                        <a
+                            href={item.handleLink}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FontAwesomeIcon
+                              className={classes.instaSize}
+                              icon={faInstagramSquare}
+                            /> {item.handleName}
+                          </a> 
+                        </div>
                     </Card.Text>
                     <div className={classes.centerButton}>
-                      <a
-                        href={item.handleLink}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FontAwesomeIcon
-                          className={classes.instaSize}
-                          icon={faInstagramSquare}
-                        />
-                      </a>
                       <Button
                         href={item.bookLink}
                         variant="primary"
                         target="_blank"
                         size="lg"
                       >
-                        Book
+                        {item.bookLabel}
                       </Button>
                     </div>
                   </Card.Body>
